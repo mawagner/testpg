@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>Test Phonegap</title>
+    <script>
+      document.addEventListener("resume",function(){
+        navigator.notification.alert("piip", function(){});
+      });
+    </script>
   </head>
   <body style="background: pink;">
     <div style="background: yellow;">Hello Jens - hydrated</div>
