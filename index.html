@@ -4,6 +4,15 @@
     <title>Test Phonegap</title>
     <script src="phonegap.js"></script>
     <script>
+      window.addEventListener('load', function () {
+        navigator.notification.alert("load");
+        document.addEventListener("deviceready", function () {
+          navigator.navigation.alert("deviceready");
+          document.addEventListener("resume", function () { 
+            navigator.notification.alert("resume");
+          }); 
+        }); 
+      }, false);
       document.addEventListener("resume",function(){
         navigator.notification.alert("piip", function(){});
       },false);
